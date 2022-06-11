@@ -1,0 +1,56 @@
+## Nginx学习笔记
+
+###一、问题
+
+#### 1.V20220413
+
+- FastCGI服务的缓存加速
+- 支持FastCGI、Uwsgi、SCGI\
+- Nginx的实现反向代理，负载均衡，只能单台，容易单点故障，多节点需要keeplived吧？
+- tcp代理
+
+
+
+
+
+
+
+apache+tomcat+
+
+kafka+rebbtmq
+
+linux
+
+myaql
+
+redis 缓存技术 实际操作 部署 优化配置文件 集群 主从
+
+magodb
+
+influxdb 监控用的比价多
+
+zabbix 普罗米修斯 （容器监控）  elk()    grafana
+
+交换机-防火墙-osi七层模型-网络
+
+shell脚本 grep awk sed ansible    jenkins    kickstart或cobble
+
+
+
+
+
+### nginx事件处理模型
+
+- epoll ,高效模型，一般用于linux平台，linux内核可以支撑高性能高并发
+- poll，普通工作模式，随着访问量和并发量的提高而性能减低
+- select，普通工作模式，随着访问量和并发量的提高而性能减低
+- /dev/poll，
+- kqueue，高效模型，一般用于BSD系统
+- rtsig
+
+### 散列表参数
+
+- server_name_hash_bucket_size,此为设置存放域名的最大散列表的存储桶（bucket），的每个大小。
+- server_name_hash_max_size: 此为设置，虚拟机域名找总共大小，域名默认最多是一行跟三个
+- 都可在http段进行设置
+- 在nginx中的模块名称为ngx_core_module
